@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8"
+fx:controller="application.ControllerVotante">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Label prefHeight="0.0" prefWidth="329.0" text="Label" />
+      <Label text="Cedula" GridPane.rowIndex="1" />
+      <Button fx:id="btnBuscar" mnemonicParsing="false" text="Buscar" GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#buscar"/>
+      <TextField fx:id="txtCedula" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      
+      <Label text="Nombres" GridPane.rowIndex="2" />
+      <TextField fx:id="txtNombre" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Label text="Fecha Nacimiento" GridPane.rowIndex="3" />
+      <DatePicker fx:id="dateFechaNacimiento" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Label text="Recinto" GridPane.rowIndex="4" />
+      <Button mnemonicParsing="false" text="Ir A Recinto" GridPane.columnIndex="2" GridPane.rowIndex="4" onAction="#irARecinto" />
+      <ComboBox fx:id="cmbRecinto" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <ImageView fx:id="imgVotante" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+      <Label text="Uri Foto" GridPane.rowIndex="5" />
+      <TextField fx:id="txtUriFoto" GridPane.rowIndex="5" />
+      <CheckBox fx:id="chkMesa" mnemonicParsing="false" text="Esta asignado a Mesa" GridPane.rowIndex="6" />
+      <Button mnemonicParsing="false" text="Guardar" GridPane.rowIndex="7" />
+      <Button mnemonicParsing="false" text="Eliminar" GridPane.rowIndex="7" onAction="#eliminarVotante"/>
+       <Button fx:id="btnImprimirDomicilioElectoral" mnemonicParsing="false" text="Imprimir Domicilio Electora" GridPane.columnIndex="2" GridPane.rowIndex="8" onAction="#imprimirDomicilio"/>
+       <Label fx:id="lblMensaje" text="" GridPane.rowIndex="9" GridPane.columnSpan="3" />
+  </children>
+</GridPane>
